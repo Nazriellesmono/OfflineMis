@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Middleware\PreventBackHistory;
 use App\Http\Controllers\FrsController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\KuesionerController;
