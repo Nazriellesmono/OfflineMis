@@ -13,7 +13,7 @@ use App\Http\Middleware\RoleMiddleware;
 // ========================
 // Guest Routes
 // ========================
-Route::middleware('guest')->group(function () {
+Route::middleware('guest', 'preventbackhistory')->group(function () {
     Route::get('/', fn() => redirect()->route('login'));
     Route::get('login', [AuthController::class, 'showLogin'])->name('login');
     Route::post('login', [AuthController::class, 'login']);
@@ -24,7 +24,7 @@ Route::middleware('guest')->group(function () {
 // ========================
 // Authenticated Routes
 // ========================
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'preventbackhistory'])->group(function () {
 
     Route::get('/home', [AuthController::class, 'home'])->name('home');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
