@@ -10,8 +10,7 @@ class Kernel extends HttpKernel
      * The application's route middleware groups.
      */
     protected $middlewareGroups = [
-        'web' => [
-            \App\Http\Middleware\PreventBackHistory::class, // optional, bisa ditaruh di group web
+        'web' => [ // optional, bisa ditaruh di group web
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
