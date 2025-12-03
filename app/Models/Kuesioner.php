@@ -10,7 +10,7 @@ class Kuesioner extends Model
     use HasFactory;
 
     // Pastikan nama tabelnya benar (biasanya lowercase jamak atau singular tergantung database kamu)
-    protected $table = 'kuesioner'; 
+    protected $table = 'kuesioners'; 
 
     // Kita gunakan $fillable agar aman dan sesuai dengan Controller
     protected $fillable = [
