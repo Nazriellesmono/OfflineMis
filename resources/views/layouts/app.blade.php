@@ -124,6 +124,7 @@
       @elseif($role === 'dosen')
         <a href="{{ route('dosen.nilai.index') }}" class="block py-2.5 px-6 hover:bg-[var(--punch-red)] {{ request()->routeIs('dosen.nilai.*') ? 'active' : '' }}">Nilai Mahasiswa</a>
         <a href="{{ route('dosen.presensi.index') }}" class="block py-2.5 px-6 hover:bg-[var(--punch-red)] {{ request()->routeIs('dosen.presensi.*') ? 'active' : '' }}">Presensi</a>
+        <a href="{{ route('dosen.kuisoner.index') }}" class="block py-2.5 px-6 hover:bg-[var(--punch-red)] {{ request()->routeIs('dosen.presensi.*') ? 'active' : '' }}">Kuisoner</a>
         <a href="{{ route('dosen.daftar_ulang.list') }}" class="block py-2.5 px-6 hover:bg-[var(--punch-red)] {{ request()->routeIs('dosen.daftar_ulang.*') ? 'active' : '' }}">Daftar Ulang</a>
       @endif
 
